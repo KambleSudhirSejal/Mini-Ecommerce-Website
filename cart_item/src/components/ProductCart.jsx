@@ -23,7 +23,7 @@ const ProductCart = (props) => {
     <div className="bg-white p-5 rounded-xl shadow-sm">
       <Link to={`/${slug}`}>
         <img
-          src={`http://localhost:3000/images/${image}`} // API images
+          src={`api/images/${image}`} // API images
           alt={name}
           className="w-full h-80 object-cover object-top drop-shadow-[0_80px_30px_#0007]"
         />

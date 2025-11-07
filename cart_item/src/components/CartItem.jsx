@@ -25,7 +25,7 @@ const CartItem = ({ data }) => {
         &times;
       </button>
       <img
-        src={`http://localhost:3000/images/${product.image}`}
+        src={`api/images/${product.image}`}
         alt={product.name}
         className="w-12 h-12 object-cover rounded-md"
       />
