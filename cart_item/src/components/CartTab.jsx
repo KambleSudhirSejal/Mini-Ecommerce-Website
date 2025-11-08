@@ -23,7 +23,7 @@ const CartTab = () => {
 
     const syncProducts = async () => {
       try {
-        const res = await fetch("/api/products");
+        const res = await fetch("http://localhost:3000/api/products");
         const fetchedProducts = await res.json();
 
         carts.forEach((cartItem) => {
@@ -65,7 +65,7 @@ const CartTab = () => {
 
     try {
       // Mock API call
-      const response = await fetch("/api/checkout", {
+      const response = await fetch("http://localhost:3000/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ cartItems: carts, total, user: userDetails }),

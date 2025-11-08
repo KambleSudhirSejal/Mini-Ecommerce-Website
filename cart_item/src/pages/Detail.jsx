@@ -10,7 +10,7 @@ const Detail = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch(`/api/products`) // Fetch all products
+    fetch(`http://localhost:3000/api/products`) // Fetch all products
       .then((res) => res.json())
       .then((data) => {
         const product = data.find((p) => p.slug === slug);
@@ -48,7 +48,7 @@ const Detail = () => {
       <div className="grid grid-cols-2 gap-5 mt-5">
         <div>
           <img
-            src={`api/images/${detail.image}`}
+            src={`http://localhost:3000/images/${detail.image}`}
             alt={detail.name}
             className="w-full"
           />
